@@ -1,9 +1,48 @@
-const element=React.createElement("h1",{id:"first",className:"learning",style:{backgroundColor:"yellowgreen",fontsize:"20px",color:"white"}},"Hello everyone!");
-const element2=React.createElement("h2",{id:"second",className:"learning",style:{backgroundColor:"yellowgreen",fontsize:"20px",color:"white"}},"How's going on!");
-const div1=React.createElement('div',{},[element,element2]);
+import React from "react";
+import ReactDom from "react-dom/client";
+ const person="  Gudiya";
+ const age=21;
+ const obj={
+     city:"lucknow",
+    state:"UP",
 
-const Reactmain=ReactDOM.createRoot(document.getElementById('main'));
-// Reactmain.render(element);
-// main.render(element2);
-Reactmain.render(div1);
+}
+ const styler ={
+     backgroundColor:"coral",
+     color:"white",
+    fontSize:"30px",
+
+ }
+ const newElement=(
+ <>
+ <h1 id="first" className="start">I'm {person} and my age is {age}</h1>
+ <h2 style={styler}>I am from {obj.city} {obj.state}..</h2>
+ </>
+ );
+//function component
+
+function greet(){
+    return<h1>have a nice day!</h1>
+};
+const meet=()=>{
+    return<h2>how's everything</h2>
+}
+
+const Reactmain=ReactDom.createRoot(document.getElementById('main'));
+Reactmain.render(<> {greet()}  {meet()}</>);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
